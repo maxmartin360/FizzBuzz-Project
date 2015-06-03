@@ -13,17 +13,18 @@
         console.log(i);
 }*/
 var myFunction = function(){
-	for (i=1; i <= 100; i++){
-    	if (i % 15 == 0){
-        $('#list-area').append('<li>FizzBuzz</li>');
-   	 }
-    	else if (i % 3 == 0) {
-        $('#list-area').append('<li>Fizz</li>');
-    }
-    	else if (i % 5 == 0) {
-        $('#list-area').append('<li>Buzz</li>');
-    }
-   		 else
-        $('#list-area').append('<li>' + (i) + '</li>');
+	$('#list-area').empty();
+	for (var i=1; i <= 100; i++){
+		if (i % 15 == 0){
+			$('#list-area').append('<li>FizzBuzz</li>');
+		}
+		else if (i % 3 == 0) {
+			$('#list-area').append('<li>Fizz</li>');
+		}
+		else if (i % 5 == 0) {
+			$('#list-area').append('<li>Buzz</li>');
+		}
+		else
+			$('#list-area').append('<li>' + i + '</li>');
+	}
 };
-}
